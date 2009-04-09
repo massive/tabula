@@ -4,24 +4,24 @@ This is Tabula extension for Radiant CMS. It allows you to include CSV-formatted
 
 == Usage
 
-1. Install 
-2. Add new CSV-table from admin/tabula. First line is a header, the rest is actual data.
+#. Install 
+#. Add new CSV-table from admin/tabula. First line is a header, the rest is actual data.
    "Header", "SecondColumn"
    "Value1", "SecondValue"
    
-3. Edit the page where you want to add the CSV ata
+#. Edit the page where you want to add the CSV ata
 
-   <r:table:each name="the\_name\_of\_the_table">
+    <r:table:each name="the\_name\_of\_the_table">
       <r:value name="Header"/><br/>
       <r:value name="SecondColumn"/><br/>   
-   </r:table:each>
+    </r:table:each>
 
 == Configuration
 Nothing to configure
 
 == History
-Created by: massive - Matias Käkelä
-  Version: 0.0.1 (9.4.2009)
+  Created by: massive - Matias Käkelä
+  Version: 0.0.1 (2009-04-09)
 
 == Todo
 * Tests

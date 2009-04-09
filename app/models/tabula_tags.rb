@@ -28,17 +28,11 @@ module TabulaTags
     value_name = tag.attr['name']          
     row[value_name]        
   end
-  
-  keys.each do |title|
-    tag "table:each:#{title}" do |inner_tag|
-      row[value_name]
-    end
-  end
     
   def parse_table(table)
     results = []
     rows = CSV.parse(table.data)    
-    @keys = rows.shift    
+    keys = rows.shift    
     
     rows.each do |values|
       results << Hash.zip(keys, values)
