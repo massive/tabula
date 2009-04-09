@@ -1,0 +1,22 @@
+<% include_stylesheet 'admin/tables/tables' %>
+<table cellspacing="0" cellpadding="0" border="0" class="index" id="tables">
+  <thead>
+    <tr>
+      <th class="Table">Table</th>
+      <th class="modify">Modify</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tables.each do |table| %>
+      <tr class="node level-1">
+        <td class="link">
+          <%= link_to table.title, edit_admin_table_url(:id => table.id) %>
+        </td>
+        <td class="remove">
+          <%= link_to 'Remove', remove_admin_table_url(:id => table.id) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><%= link_to "New table", {:action => :new} %></p>

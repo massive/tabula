@@ -1,0 +1,28 @@
+<% form_for [:admin, @table] do |f| %>    
+    <div class="form-area">
+      <div  id="table_form_area">
+        <p class="title">
+          <label for="table.title">Title</label>
+          <%= f.text_field "title", :class => 'textbox', :maxlength => 255 %>
+        </p>
+
+        <p class="description">
+          <label for="table_description">Description</label><br/>
+          <%= f.text_area "description", :class => 'textbox', :rows => 5, :cols => 100 %>
+        </p>
+        
+        <p class="data">
+          <label for="table_description">Data</label><br/>
+          <%= f.text_area "data", :class => 'textbox', :rows => 30, :cols => 100 %>
+        </p>
+        <span class="clear">&nbsp;</span>
+      </div>
+    </div>
+
+  <p class="buttons">
+    <%= save_model_button(@table) %>
+    <%= save_model_and_continue_editing_button(@table) %>
+    or 
+    <%= link_to "Cancel", {:action => :index} %>
+  </p>
+<% end %>
